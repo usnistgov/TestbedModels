@@ -57,4 +57,4 @@ r_bat_src = 2; %internal resistance
 v_nom_bat_snk = 300; %nominal voltage
 r_bat_snk = 2; %internal resistance
 %% running model
-sim('NHR9200Model4960_prog.slx')
+sim('NHR9200Model4960_2020b.slx')
