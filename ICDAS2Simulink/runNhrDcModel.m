@@ -6,8 +6,8 @@
 % ICDAS NHRDCPowerModel init and run script must run before this code is started
 
 %% Connect with the database
-%conn = database('sgdb','postgres','SmartGrid2022','Vendor','POSTGRESQL','Server','NEMO.campus.NIST.GOV','PortNumber',5432);  % NEMO
-conn = database('sgdb','postgres','smartgrid2022','Vendor','POSTGRESQL','Server','Helios','PortNumber',5432);  % Helios
+conn = database('sgdb','postgres','SmartGrid2022','Vendor','POSTGRESQL','Server','NEMO.campus.NIST.GOV','PortNumber',5432);  % NEMO
+%conn = database('sgdb','postgres','smartgrid2022','Vendor','POSTGRESQL','Server','Helios','PortNumber',5432);  % Helios
  
 %% Set simulation settings
 %sample time
