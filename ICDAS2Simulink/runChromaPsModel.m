@@ -9,9 +9,9 @@
 %close all
 
 %% connect with database
-%conn = database('sgdb','postgres','SmartGrid2022','Vendor','POSTGRESQL','Server','NEMO.campus.NIST.GOV','PortNumber',5432);
+conn = database('sgdb','postgres','SmartGrid2022','Vendor','POSTGRESQL','Server','NEMO.campus.NIST.GOV','PortNumber',5432);
 %conn = database('sgdb','postgres','SmartGrid2022','Vendor','POSTGRESQL','Server','129.6.32.139','PortNumber',5432);
-conn = database('sgdb','postgres','smartgrid2022','Vendor','POSTGRESQL','Server','Helios','PortNumber',5432);
+%conn = database('sgdb','postgres','smartgrid2022','Vendor','POSTGRESQL','Server','Helios','PortNumber',5432);
 %disp('Connection with database is successful!')
 
 %% Set simulation settings
