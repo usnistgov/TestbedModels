@@ -6,8 +6,8 @@
 % ICDAS NHRDCPowerModel init and run script must run before this code is started
 
 %% Connect with the database
-conn = database('sgdb','postgres','SmartGrid2022','Vendor','POSTGRESQL','Server','NEMO.campus.NIST.GOV','PortNumber',5432);  % NEMO
-%conn = database('sgdb','postgres','smartgrid2022','Vendor','POSTGRESQL','Server','Helios','PortNumber',5432);  % Helios
+%conn = database('sgdb','postgres','SmartGrid2022','Vendor','POSTGRESQL','Server','NEMO.campus.NIST.GOV','PortNumber',5432);  % NEMO
+conn = database('sgdb','postgres','smartgrid2022','Vendor','POSTGRESQL','Server','Helios','PortNumber',5432);  % Helios
  
 %% Set simulation settings
 %sample time
@@ -103,8 +103,8 @@ while 1
             set_param(IPHandle,'Vmdch',num2str(data_last.voltage));
             set_param(IPHandle,'Imch',num2str(data_last.current));
             set_param(IPHandle,'Imdch',num2str(data_last.current));
-            set_param(IPHandle,'Pmch',num2str(data_last.power));
-            set_param(IPHandle,'Pmdch',num2str(data_last.power));
+            set_param(IPHandle,'Pmch',num2str(data_last.power/1000));
+            set_param(IPHandle,'Pmdch',num2str(data_last.power/1000));
             set_param(IPHandle,'Rsch',num2str(data_last.resistance));
             
             % Safety Settings
@@ -116,9 +116,9 @@ while 1
             set_param(SSHandle,'Timaxch',num2str(data_last.max_current_time));
             set_param(SSHandle,'Imaxdch',num2str(data_last.max_current)); 
             set_param(SSHandle,'Timaxdch',num2str(data_last.max_current_time));
-            set_param(SSHandle,'Pmaxch',num2str(data_last.max_power));
+            set_param(SSHandle,'Pmaxch',num2str(data_last.max_power/1000));
             set_param(SSHandle,'Tpmaxch',num2str(data_last.max_power_time));
-            set_param(SSHandle,'Pmaxdch',num2str(data_last.max_power));
+            set_param(SSHandle,'Pmaxdch',num2str(data_last.max_power/1000));
             set_param(SSHandle,'Tpmaxdch',num2str(data_last.max_power_time));
             
             % Slew Rate Settings
